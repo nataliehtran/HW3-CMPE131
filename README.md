@@ -7,7 +7,7 @@ I was having issues with connecting the wrong github account to my gradescope an
 
 ### 1. Clone this Repository
 ```bash
-git clone git@github.com:nataliehtran/HW3-CMPE131.git
+git clone https://github.com/nataliehtran/HW3-CMPE131.git
 cd <project-directory>
 ```
 
@@ -17,13 +17,13 @@ python3 -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
 
-### 2. Install the packages, make sure you already have Python 3 installed!
+### 3. Install the packages, make sure you already have Python 3 installed!
 
 ```bash
 pip install flask flask_sqlalchemy flask_wtf flask_login
 ```
 
-### 3. Initialize the Database by using this code in your terminal(assuming bash)
+### 4. Initialize the Database by using this code in your terminal(assuming bash)
 This is to create a sample user that can login and add/view/delete recipes
 
 ```bash
@@ -38,7 +38,7 @@ flask shell
 >>> exit()
 ```
 
-### 4. Finally, run the Application
+### 5. Finally, run the Application
 ```bash
 export FLASK_APP=app
 export FLASK_ENV=development
