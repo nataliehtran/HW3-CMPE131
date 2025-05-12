@@ -7,8 +7,14 @@ I was having issues with connecting the wrong github account to my gradescope an
 
 ### 1. Clone this Repository
 ```bash
-git clone git@github.com:tedwu1/Recipe-Maker-Web-App.git
+git clone git@github.com:nataliehtran/HW3-CMPE131.git
 cd <project-directory>
+```
+
+### 2. Set Up a Virtual Environment (Recommended)
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
 
 ### 2. Install the packages, make sure you already have Python 3 installed!
