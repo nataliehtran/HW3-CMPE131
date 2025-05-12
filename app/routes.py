@@ -52,11 +52,15 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
-        if user and user.check_password(form.password.data):
+        if user is None:
+            flash('No such user found.')
+        elif not user.check_password(form.password.data):
+            flash('Incorrect password.')
+        else:
             login_user(user)
             return redirect(url_for('index'))
-        flash('Invalid username or password')
     return render_template('login.html', form=form)
+
 
 @myapp_obj.route('/logout')
 @login_required
