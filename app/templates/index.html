@@ -7,6 +7,7 @@
     {% for recipe in recipes %}
     <li>
         <a href="{{ url_for('recipe', recipe_id=recipe.id) }}">{{ recipe.title }}</a>
+        — added by {{ recipe.user.username if recipe.user else "Unknown" }}
     </li>
     {% else %}
     <li>No recipes found.</li>
